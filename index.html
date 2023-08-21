@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+        <link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+
+                <!--Barra superior de navegación del sitio-->
+        <nav class="navbar">
+                <ul>
+                        <li><a class="index" href="index.html"><img src="img/ecommerce.png" alt="ecommerce" width="44px"></a></li>
+                        <li><a href="Register.html"> Módulo de Registro</a></li>
+                        <li><a href="Modules.html">Módulos del Sistema</a></li>
+                        <li><a href="Setting.html">Configuración</a></li>
+                </ul>
+        </nav>
+        
+        <a href="#login">Login</a>
+        <a href="Register.html">Registrate</a>
+
+                <!--Carusel automático de imágenes-->
+                <div class="slideshow-container">                
+                        <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="img/iphone.png" style="width:49.95%">
+                        <div class="text">iPhone</div>
+                        </div>                        
+                        <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="img/torre.png" style="width:85.6%">
+                        <div class="text">Torre Gamer</div>
+                        </div>                        
+                        <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="img/laptop.png" style="width:128.4%">
+                        <div class="text">Laptop Gamer</div>
+                        </div>                
+                </div>
+                <br>
+                <!--Botones inferiores-->              
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>                
+        </div>
+
+        <!--Datos Login Principal-->
+        <div id="login" class="login">
+                <form class="form">
+                        <input type="text" required>
+                        <label class="lbl-nombre">
+                                <span class="text-nomb">Correo Electrónico</span>
+                        </label>
+                </form>        
+                <form class="form-pass">        
+                        <input type="password" required>
+                        <label class="password2">
+                                <span class="pass">Contraseña</span>
+                        </label>
+                </form>
+                <button id="button" name="button" onclick="Login()">Ingresar</button>
+        </div>
+
+        <!--Código JavaScript para funcionamiento del carrusel de imágenes-->
+        <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides"); 
+                  let dots = document.getElementsByClassName("dot");//se llaman las variables de html
+                  for (i = 0; i < slides.length; i++) {
+
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 4000); // cambiar de imágen cada 4 segundos
+                }
+        </script>        
+    </body>
+</html>        

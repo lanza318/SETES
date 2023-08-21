@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulo de Registro</title>
+		<link rel="stylesheet" href="modules_style.css">
+	</head>
+	<body>
+
+		<!--Barra superior de navegación del sitio-->
+
+			<nav class="navbar">
+
+				<ul>
+                    <li><a class="index" href="index.html"><img src="img/ecommerce.png" alt="ecommerce" width="44px"></a></li>
+                    <li><a href="Register.html"> Módulo de Registro</a></li>
+                    <li><a href="Modules.html">Módulos del Sistema</a></li>
+                    <li><a href="Setting.html">Configuración</a></li>	
+
+				</ul>
+
+			</nav>
+
+			<div class="containerprincipal">
+
+                <div class="form-group">
+
+                    <form>
+
+						<!--Datos Creación de Cuenta-->
+
+                        <h1>Crear Cuenta</h1>
+                        
+                        <label for="name">Nombre:</label><br>
+                        <input type="text" name="name" id="name"><br>
+                        
+                        <label class="input" for="email">Correo Electrónico:</label>
+                        <input type="email" name="email" id="email">
+                        
+                        <label class="input" for="password">Contraseña:</label>
+                        <input type="password" name="password" id="password">
+
+                        <button id="Boton" class="Boton" onclick="login()">Crear</button>
+                    
+                    </form>
+
+                </div>
+
+            </div>
+
+            <script src="mysql.js"></script>
+
+	</body>
+</html>
